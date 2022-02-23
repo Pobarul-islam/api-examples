@@ -16,9 +16,16 @@ const displayCountries = countries => {
     const countriesDiv = document.getElementById('countries');
     countries.forEach(country => {
         console.log(country)
+        const div = document.createElement('div')
         const h3 = document.createElement('h3');
         h3.innerText = country.name.common;
-        countriesDiv.appendChild(h3)
+        div.appendChild(h3);
+        const p = document.createElement('p');
+        p.innerText = country.capital;
+        div.appendChild(p);
+        countriesDiv.appendChild(div)
+
+      
     })
 
     // countries.forEach(country=> console.log(country.name.common))
